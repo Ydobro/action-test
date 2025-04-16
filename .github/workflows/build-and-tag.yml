@@ -37,6 +37,6 @@ jobs:
       - name: Create a new tag
         id: tag
         run: |
-          TAG_NAME="v$(date +'%Y%m%d%H%M%S')"
+          TAG_NAME="dev"
           git tag $TAG_NAME
           git push origin $TAG_NAME
