@@ -34,9 +34,8 @@ jobs:
           git commit -m "GitHub action build" || echo "No changes to commit"
           git push origin main
 
-      - name: Create a new tag
-        id: tag
+      - name: Create or update the dev tag
         run: |
           TAG_NAME="dev"
-          git tag $TAG_NAME
-          git push origin $TAG_NAME
+          git tag -f $TAG_NAME
+          git push origin -f $TAG_NAME
