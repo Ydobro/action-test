@@ -32,7 +32,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "GitHub action build" || echo "No changes to commit"
-          git push origin main
+          git push origin main -f
 
       - name: Create or update the dev tag
         run: |
